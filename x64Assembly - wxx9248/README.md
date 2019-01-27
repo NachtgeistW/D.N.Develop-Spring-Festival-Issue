@@ -8,6 +8,14 @@ Intel x86-64 `Assembly Language`
 
 wxx9248
 
+## 如何实现的
+
+* 调用`CreateProcess`*无限*创建子线程`ShowWindow`
+
+* 然后每个线程调用`MessageBox`弹出窗口
+
+// 技术含量这么低还敢拿出来（
+
 ## 编译器
 
 Microsoft (R) Macro Assembler (x64), 即`ML64`。
@@ -30,4 +38,4 @@ Microsoft (R) Macro Assembler (x64), 即`ML64`。
 
 （本来想做出来跑圈效果但是由于我太过于菜我汇编写不出来就只能这样了诶我为啥没打标点）
 
-* 我只是来拉低中奖率的
+* 我只是来拉低中奖率的wwww

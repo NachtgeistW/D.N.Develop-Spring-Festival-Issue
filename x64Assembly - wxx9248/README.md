@@ -1,4 +1,4 @@
-# D.N.Develop-Spring-Festival-Issue
+# D.N.Develop Spring Festival Issue
 
 ## 使用语言
 
@@ -14,8 +14,8 @@ wxx9248
 
 * 然后每个线程调用`MessageBox`弹出窗口
 
-```C++
-// 技术含量这么低还敢拿出来（
+```C
+// 学了一天的水平还敢拿出来（
 ```
 
 ## 编译器

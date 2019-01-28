@@ -5,9 +5,9 @@
 
 int timeseed(){
     time_t timep;
-    struct tm *p;
+    struct tm *p= new tm;
     time (&timep);
-    p=gmtime(&timep);
+    p=gmtime_s(p, &timep);
     return (p->tm_sec);
 }
 

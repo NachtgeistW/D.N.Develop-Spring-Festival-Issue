@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <windows.h>
+
+int timeseed(){
+    time_t timep;
+    struct tm *p= new tm;
+    time (&timep);
+    p=gmtime_s(p, &timep);
+    return (p->tm_sec);
+}
+
+int main(){
+    //夜轮大大简直是天使！啊啊啊啊激动到跑圈！！！！
+    int i=0,n=0,s=0;
+    int rc[23]={0};
+    srand(timeseed());
+    for(;;){
+    //随机数组生成
+    for(i=s;i<23;i++){
+        n=rand()+1;
+        rc[i]=n%15;
+        srand(n);
+        //printf("%d ",rc[i]);
+    };
+    //printf("\n");
+    //跑圈尝试
+    for(i=0;;i++){
+        switch(rc[i]){
+        case 0:  printf("夜");break;
+        case 1:  printf("轮");break;
+        case 2:  printf("大");break;
+        case 3:  printf("简");break;
+        case 4:  printf("直");break;
+        case 5:  printf("是");break;
+        case 6:  printf("天");break;
+        case 7:  printf("使");break;
+        case 8:  printf("！");break;
+        case 9:  printf("啊");break;
+        case 10: printf("激");break;
+        case 11: printf("动");break;
+        case 12: printf("到");break;
+        case 13: printf("跑");break;
+        case 14: printf("圈");break;
+        }
+    if(i==22) {printf("\n");break;}
+    }
+//for(i=0;i<23;i++) printf("%d ",rc[i]);
+    //检测
+    for(i=s;i<23;i++){
+        switch(i){
+        case 0:  if(rc[i]==0) s++;else i=33;break;
+        case 1:  if(rc[i]==1) s++;else i=33;break;
+        case 2:  if(rc[i]==2) s++;else i=33;break;
+        case 3:  if(rc[i]==2) s++;else i=33;break;
+        case 4:  if(rc[i]==3) s++;else i=33;break;
+        case 5:  if(rc[i]==4) s++;else i=33;break;
+        case 6:  if(rc[i]==5) s++;else i=33;break;
+        case 7:  if(rc[i]==6) s++;else i=33;break;
+        case 8:  if(rc[i]==7) s++;else i=33;break;
+        case 9:  if(rc[i]==8) s++;else i=33;break;
+        case 10: if(rc[i]==9) s++;else i=33;break;
+        case 11: if(rc[i]==9) s++;else i=33;break;
+        case 12: if(rc[i]==9) s++;else i=33;break;
+        case 13: if(rc[i]==9) s++;else i=33;break;
+        case 14: if(rc[i]==10) s++;else i=33;break;
+        case 15: if(rc[i]==11) s++;else i=33;break;
+        case 16: if(rc[i]==12) s++;else i=33;break;
+        case 17: if(rc[i]==13) s++;else i=33;break;
+        case 18: if(rc[i]==14) s++;else i=33;break;
+        case 19: if(rc[i]==8) s++;else i=33;break;
+        case 20: if(rc[i]==8) s++;else i=33;break;
+        case 21: if(rc[i]==8) s++;else i=33;break;
+        case 22: if(rc[i]==8) s++;else i=33;break;
+        }
+        if(s==23) {printf("跑圈成功！！！！\n");return 0;}
+    }
+    //printf("%d\n",s);
+    //getchar();
+    }
+}
